@@ -9,15 +9,31 @@ using System.Web.Mvc;
 using DeliveryOnline.Models;
 using DeliveryOnline.Models.Auth;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Security.Application;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace DeliveryOnline.Controllers
 {
     public class TiendaController : BaseController
     {        
         // GET: Tienda
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View(DbContext.Tiendas.ToList());
+            ViewBag.HolaMundo = new DeliveryContext();
+            TempData["HolaMundo"] = new DeliveryContext();
+            Session["HolaMundo"] = new DeliveryContext();
+
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync("http://localhost:59253/Tienda");
+            using (HttpContent content = result.Content)
+            {
+                string r = await content.ReadAsStringAsync();
+                var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Tienda>(r);
+                ViewBag.TiendaList = obj;
+            }
+
+            return View();
         }
 
         public ActionResult UserIndex()
@@ -28,6 +44,8 @@ namespace DeliveryOnline.Controllers
         // GET: Tienda/Details/5
         public ActionResult Details(int? id)
         {
+            var z = TempData["HolaMundo"];
+            var x = ViewBag.HolaMundo;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -51,10 +69,12 @@ namespace DeliveryOnline.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "CodigoId,Direccion,Estado,FechaRegsitro,NombreComercial,RazonSocial,Telefono")] Tienda tienda)
         {
             if (ModelState.IsValid)
             {
+                tienda.Direccion = Sanitizer.GetSafeHtmlFragment(tienda.Direccion);
                 DbContext.Tiendas.Add(tienda);
                 DbContext.SaveChanges();
                 return RedirectToAction("Index");

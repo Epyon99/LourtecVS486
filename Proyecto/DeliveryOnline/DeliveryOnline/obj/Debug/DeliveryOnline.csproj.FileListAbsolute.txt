@@ -84,7 +84,6 @@ C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.De
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.WindowsServer.xml
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.Web.xml
-C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.csprojResolveAssemblyReference.cache
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.csproj.CoreCompileInputs.cache
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.dll
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.pdb
@@ -293,3 +292,7 @@ C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.Owin.
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.Owin.Security.Cookies.xml
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.Owin.Security.OAuth.xml
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\System.Diagnostics.DiagnosticSource.xml
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\AntiXssLibrary.dll
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\HtmlSanitizationLibrary.dll
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\AntiXssLibrary.xml
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnline\bin\HtmlSanitizationLibrary.xml

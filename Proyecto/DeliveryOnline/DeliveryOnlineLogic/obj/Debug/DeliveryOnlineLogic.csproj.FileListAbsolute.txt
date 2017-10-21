@@ -1,0 +1,5 @@
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineLogic\bin\Debug\DeliveryOnlineLogic.dll
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineLogic\bin\Debug\DeliveryOnlineLogic.pdb
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineLogic\obj\Debug\DeliveryOnlineLogic.csproj.CoreCompileInputs.cache
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineLogic\obj\Debug\DeliveryOnlineLogic.dll
+C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineLogic\obj\Debug\DeliveryOnlineLogic.pdb

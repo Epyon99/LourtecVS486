@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DeliveryOnline.Models;
+using System.Net.Http;
 
 namespace DeliveryOnline.Controllers
 {
@@ -15,9 +16,22 @@ namespace DeliveryOnline.Controllers
         private DeliveryContext db = new DeliveryContext();
 
         // GET: Productoes
-        public ActionResult Index()
+        public async ActionResult Index()
         {
+            // Controller de Productos
+            // Y quieren llamar al Controller de Tiendas.
             var productos = db.Productos.Include(p => p.Tienda);
+            // Html.ActionLink -- No exite
+            //RedirectToAction("Index", "Tienda"); -- Pero pierden los datos de Producto Tiendas
+            //TiendaController c = new TiendaController();
+            //var action = c.Index();
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync("http://localhost:12345/Tienda");
+            using (HttpContent content = result.Content)
+            {
+                string r = await content.ReadAsStringAsync();
+                var obj = Newtonsoft.Json.JsonConvert.DeserializeObject(r);
+            }
             return View(productos.ToList());
         }
 
@@ -54,10 +68,18 @@ namespace DeliveryOnline.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "CodigoId,TiendaId,descripcion,Imagen")] Producto producto)
         {
             if (ModelState.IsValid)
             {
+                if (producto.TiendaId == 0)
+                {
+                    producto.Tienda = new Tienda()
+                    {
+                        NombreComercial = "Tienda Nueva"
+                    };
+                }
                 db.Productos.Add(producto);
                 db.SaveChanges();
                 return RedirectToAction("Index");

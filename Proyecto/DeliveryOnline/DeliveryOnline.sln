@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOnline", "DeliveryO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOnline.Tests", "DeliveryOnline.Tests\DeliveryOnline.Tests.csproj", "{87A55BE3-D3D4-4B90-8A8E-4B530E41C09B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOnlineApi", "DeliveryOnlineApi\DeliveryOnlineApi.csproj", "{4D1F4056-0E25-4D94-BF43-2C6FE681684E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOnlineLogic", "DeliveryOnlineLogic\DeliveryOnlineLogic.csproj", "{6C795D51-9A69-40B2-9734-95D063416A47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{87A55BE3-D3D4-4B90-8A8E-4B530E41C09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87A55BE3-D3D4-4B90-8A8E-4B530E41C09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87A55BE3-D3D4-4B90-8A8E-4B530E41C09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1F4056-0E25-4D94-BF43-2C6FE681684E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1F4056-0E25-4D94-BF43-2C6FE681684E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1F4056-0E25-4D94-BF43-2C6FE681684E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1F4056-0E25-4D94-BF43-2C6FE681684E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C795D51-9A69-40B2-9734-95D063416A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C795D51-9A69-40B2-9734-95D063416A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C795D51-9A69-40B2-9734-95D063416A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C795D51-9A69-40B2-9734-95D063416A47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

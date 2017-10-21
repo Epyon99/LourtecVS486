@@ -16,6 +16,7 @@ using System.IO;
 using DeliveryOnline.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace DeliveryOnline.Models {
 	public class Producto {
@@ -51,6 +52,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [AllowHtml]
 		public string Descripcion{
 			get{
 				return cDescripcion;

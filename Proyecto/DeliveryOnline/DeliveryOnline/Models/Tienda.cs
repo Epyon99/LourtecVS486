@@ -17,6 +17,7 @@ using DeliveryOnline.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
+using System.Web.Mvc;
 
 namespace DeliveryOnline.Models {
 	public class Tienda {
@@ -53,6 +54,7 @@ namespace DeliveryOnline.Models {
 
         [Required()]
         [StringLength(500)]
+        [AllowHtml]
         [DataType(DataType.MultilineText)]
 		public string Direccion{
 			get{

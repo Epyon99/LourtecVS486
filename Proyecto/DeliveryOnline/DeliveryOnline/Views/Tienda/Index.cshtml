@@ -9,6 +9,11 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div>
+    <p>@ViewBag.HolaMundo</p>
+    <p>@TempData["HolaMundo"]</p>
+    <p>@Session["HolaMundo"]</p>
+</div>
 <table class="table">
     <tr>
         <th>
@@ -32,10 +37,11 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in ViewBag.TiendaLista as List<DeliveryOnline.Models.Tienda>) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
+            @*@Html.DisplayFor(modelItem => item.Direccion)*@
+            @Html.Raw(item.Direccion)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Estado)
