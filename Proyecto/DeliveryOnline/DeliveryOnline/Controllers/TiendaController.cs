@@ -12,6 +12,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Security.Application;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Net.Http.Headers;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace DeliveryOnline.Controllers
 {
@@ -25,12 +28,16 @@ namespace DeliveryOnline.Controllers
             Session["HolaMundo"] = new DeliveryContext();
 
             HttpClient client = new HttpClient();
-            var result = await client.GetAsync("http://localhost:59253/Tienda");
-            using (HttpContent content = result.Content)
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            var result = await client.GetAsync("http://localhost:59253/api/Tiendas");
+            using (Stream content = await result.Content.ReadAsStreamAsync())
             {
-                string r = await content.ReadAsStringAsync();
-                var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Tienda>(r);
-                ViewBag.TiendaList = obj;
+                using (var streamreader = new StreamReader(content))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    List<Tienda> tiendas = (List<Tienda>)serializer.Deserialize(streamreader,typeof(List<Tienda>));
+                    ViewBag.TiendaList = tiendas;
+                }
             }
 
             return View();

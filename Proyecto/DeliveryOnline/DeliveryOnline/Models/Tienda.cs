@@ -20,6 +20,7 @@ using System.ComponentModel;
 using System.Web.Mvc;
 
 namespace DeliveryOnline.Models {
+    [Serializable]
 	public class Tienda {
 
 		private string cDireccion;
