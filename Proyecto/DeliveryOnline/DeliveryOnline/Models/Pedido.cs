@@ -14,6 +14,8 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+
 namespace DeliveryOnline.Models {
 	public class Pedido {
 
@@ -32,6 +34,7 @@ namespace DeliveryOnline.Models {
 
 		}
 
+        [Key]
 		public int CodigoId{
 			get{
 				return Id;

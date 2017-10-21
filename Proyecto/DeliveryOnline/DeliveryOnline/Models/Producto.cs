@@ -14,14 +14,23 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace DeliveryOnline.Models {
 	public class Producto {
 
 		private string cDescripcion;
 		private string cImagen;
 		private int Id;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+        
+		//public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
 		public DeliveryOnline.Models.TiposMenu m_TiposMenu;
+
+        [ForeignKey("Tienda")]
+        public int TiendaId { get; set; }
+
+        public virtual Tienda Tienda { get; set; }
 
 		public Producto(){
 
@@ -31,7 +40,9 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int CodigoId{
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CodigoId{
 			get{
 				return Id;
 			}
@@ -40,7 +51,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string descripcion{
+		public string Descripcion{
 			get{
 				return cDescripcion;
 			}

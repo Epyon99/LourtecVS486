@@ -16,11 +16,11 @@ using System.IO;
 using DeliveryOnline.Models;
 namespace DeliveryOnline.Models {
 	public class DetallePedido {
-
+        private int nId; //IdPedido
 		private int nCantidad;
 		private int nEstado;
 		private Double nPrecio;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+		public DeliveryOnline.Models.Producto m_Producto;
 
 		public DetallePedido(){
 
@@ -30,7 +30,19 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int Cantidad{
+        public int Id
+        {
+            get
+            {
+                return nId;
+            }
+            set
+            {
+                nId = value;
+            }
+        }
+
+        public int Cantidad{
 			get{
 				return nCantidad;
 			}

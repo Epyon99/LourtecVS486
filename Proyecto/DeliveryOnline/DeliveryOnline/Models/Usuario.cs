@@ -14,33 +14,27 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+
 namespace DeliveryOnline.Models {
-	public class Persona {
+	public class Persona : IdentityUser {
 
 		private string cApellidos;
 		private string cDireccion;
-		private string cEmail;
-		private string cFonoCelular;
 		private string cNombre;
-		private string cPassword;
-		private string cUsuario;
-		private int Id = 0;
-		public DeliveryOnline.Models.TipoCliente m_TipoCliente;
-		public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
 
+        public DeliveryOnline.Models.TipoCliente m_TipoCliente;
+		//public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
+        public virtual ICollection<Tienda> Tiendas { get; set; }
 
 
 		~Persona(){
 
-		}
-
-		public string PersonaField{
-			get{
-				return cUsuario;
-			}
-			set{
-				cUsuario = value;
-			}
 		}
 
 		public string Apellidos{
@@ -52,16 +46,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public int CodigoId{
-			get{
-				return Id;
-			}
-			set{
-				Id = value;
-			}
-		}
-
-		public string Direccion{
+        public string Direccion{
 			get{
 				return cDireccion;
 			}
@@ -70,24 +55,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Email{
-			get{
-				return cEmail;
-			}
-			set{
-				cEmail = value;
-			}
-		}
-
-		public string FonoCelular{
-			get{
-				return cFonoCelular;
-			}
-			set{
-				cFonoCelular = value;
-			}
-		}
-
+		
 		public string Nombre{
 			get{
 				return cNombre;
@@ -97,15 +65,14 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Password{
-			get{
-				return cPassword;
-			}
-			set{
-				cPassword = value;
-			}
-		}
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<Persona> manager)
+        {
+            // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
+            var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
+            // Add custom user claims here
+            return userIdentity;
+        }
 
-	}//end Persona
+    }//end Persona
 
 }//end namespace Models

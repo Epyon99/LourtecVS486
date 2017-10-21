@@ -10,40 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-
-
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace DeliveryOnline.Models {
-	public class TipoCliente {
-
-		private string cDescripcion;
-		private int Id;
-
-		public TipoCliente(){
-
-		}
-
-		~TipoCliente(){
-
-		}
-
-		public int CodigoId{
-			get{
-				return Id;
-			}
-			set{
-				Id = value;
-			}
-		}
-
-		public string Descripcion{
-			get{
-				return cDescripcion;
-			}
-			set{
-				cDescripcion = value;
-			}
-		}
+	public class TipoCliente : IdentityRole{
 
 	}//end TipoCliente
 

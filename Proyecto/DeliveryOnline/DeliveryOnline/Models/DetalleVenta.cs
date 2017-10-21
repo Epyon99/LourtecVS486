@@ -14,14 +14,17 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+
 namespace DeliveryOnline.Models {
 	public class DetalleVenta {
-
+        private int nidVenta;
 		private Double nCantidad;
 		private Double nPrecio;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+		//public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+        public DeliveryOnline.Models.Producto m_Producto;
 
-		public DetalleVenta(){
+        public DetalleVenta(){
 
 		}
 
@@ -29,7 +32,20 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public Double Cantidad{
+        [Key]
+        public int IdVenta
+        {
+            get
+            {
+                return nidVenta;
+            }
+            set
+            {
+                nidVenta = value;
+            }
+        }
+
+        public Double Cantidad{
 			get{
 				return nCantidad;
 			}

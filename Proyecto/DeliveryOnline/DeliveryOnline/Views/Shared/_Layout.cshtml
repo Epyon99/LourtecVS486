@@ -25,6 +25,18 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
+            <div>
+                @if (Request.IsAuthenticated)
+                {
+                    <p>@User.Identity.Name</p>
+                }
+                else
+                {
+                    @*Deberia ir algo como 
+                        @Html.Action("Account","LogIn")*@
+                    <p>No Logged</p>
+                }
+            </div>
         </div>
     </div>
     <div class="container body-content">

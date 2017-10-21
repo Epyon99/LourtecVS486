@@ -14,6 +14,10 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
+
 namespace DeliveryOnline.Models {
 	public class Tienda {
 
@@ -24,9 +28,10 @@ namespace DeliveryOnline.Models {
 		private DateTime dFechaRegsitro;
 		private int Id = 0;
 		private int nEstado;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
-		public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
-
+		//public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+        public virtual ICollection<Producto> Productos { get; set; }
+		//public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
+        public virtual ICollection<Persona> Usuarios { get; set; }
 		public Tienda(){
 
 		}
@@ -35,6 +40,8 @@ namespace DeliveryOnline.Models {
 
 		}
 
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int CodigoId{
 			get{
 				return Id;
@@ -44,6 +51,9 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [Required()]
+        [StringLength(500)]
+        [DataType(DataType.MultilineText)]
 		public string Direccion{
 			get{
 				return cDireccion;
@@ -71,6 +81,9 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [DisplayName("Nombre Comercial")]
+        [Required]
+        [StringLength(100)]
 		public string NombreComercial{
 			get{
 				return cNombreComercial;
@@ -80,6 +93,8 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [DisplayName("Razon Social")]
+        [Required]
 		public string RazonSocial{
 			get{
 				return cRazonSocial;
@@ -89,6 +104,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [DataType(DataType.PhoneNumber)]
 		public string Telefono{
 			get{
 				return cTelefono;

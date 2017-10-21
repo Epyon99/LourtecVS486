@@ -14,15 +14,16 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+
 namespace DeliveryOnline.Models {
 	public class Venta {
-
 		private string cCorrelativo;
 		private string cSerie;
 		private DateTime dFechaPago;
 		private DateTime dFechaRegistro;
 		private int Id;
-		public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo;
+		//public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo;
 		public DeliveryOnline.Models.Pedido m_Pedido;
 		public DeliveryOnline.Models.DetalleVenta m_DetalleVenta;
 		public DeliveryOnline.Models.Persona m_Persona;
@@ -35,6 +36,7 @@ namespace DeliveryOnline.Models {
 
 		}
 
+        [Key]
 		public int CodigoId{
 			get{
 				return Id;
@@ -43,8 +45,7 @@ namespace DeliveryOnline.Models {
 				Id = value;
 			}
 		}
-
-		public string Correlativo{
+        public string Correlativo{
 			get{
 				return cCorrelativo;
 			}
