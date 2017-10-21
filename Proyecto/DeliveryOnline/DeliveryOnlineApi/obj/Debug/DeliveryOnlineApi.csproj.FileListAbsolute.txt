@@ -77,7 +77,6 @@ C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\System.Web.W
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\WebGrease.dll
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\Microsoft.Owin.dll
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\Owin.dll
-C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\Microsoft.AspNet.Identity.Core.dll
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\WorkS\LourtecVS486\Proyecto\DeliveryOnline\DeliveryOnlineApi\bin\Microsoft.Owin.Security.dll

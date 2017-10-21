@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using DeliveryOnline.Models;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace DeliveryOnline.Controllers
 {
@@ -16,7 +17,7 @@ namespace DeliveryOnline.Controllers
         private DeliveryContext db = new DeliveryContext();
 
         // GET: Productoes
-        public async ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             // Controller de Productos
             // Y quieren llamar al Controller de Tiendas.
