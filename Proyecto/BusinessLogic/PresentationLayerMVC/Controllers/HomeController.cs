@@ -10,6 +10,7 @@ namespace PresentationLayerMVC.Controllers
     {
         public ActionResult Index()
         {
+            clientContext.Get();
             return View();
         }
 
