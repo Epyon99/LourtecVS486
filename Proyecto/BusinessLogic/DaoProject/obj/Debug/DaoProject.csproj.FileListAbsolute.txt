@@ -1,0 +1,13 @@
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\DaoProject.dll.config
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\DaoProject.dll
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\DaoProject.pdb
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\BusinessLogic.dll
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\EntityFramework.dll
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\EntityFramework.SqlServer.dll
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\BusinessLogic.pdb
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\EntityFramework.xml
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\bin\EntityFramework.SqlServer.xml
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\obj\Debug\DaoProject.csprojResolveAssemblyReference.cache
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\obj\Debug\DaoProject.csproj.CoreCompileInputs.cache
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\obj\Debug\DaoProject.dll
+c:\users\mfrch\source\repos\BusinessLogic\DaoProject\obj\Debug\DaoProject.pdb

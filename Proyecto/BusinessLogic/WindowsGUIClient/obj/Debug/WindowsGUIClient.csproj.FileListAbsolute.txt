@@ -1,0 +1,17 @@
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\bin\Debug\WindowsGUIClient.exe.config
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\bin\Debug\WindowsGUIClient.exe
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\bin\Debug\WindowsGUIClient.pdb
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\bin\Debug\BusinessLogic.dll
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\bin\Debug\BusinessLogic.pdb
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.csprojResolveAssemblyReference.cache
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\MainWindow.g.cs
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\App.g.cs
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient_MarkupCompile.cache
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient_MarkupCompile.lref
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\MainWindow.baml
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.g.resources
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.Properties.Resources.resources
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.csproj.GenerateResource.Cache
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.csproj.CoreCompileInputs.cache
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.exe
+c:\users\mfrch\source\repos\BusinessLogic\WindowsGUIClient\obj\Debug\WindowsGUIClient.pdb

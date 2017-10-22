@@ -1,0 +1,29 @@
+﻿@model DeliveryOnline.Models.ViewModels.LoginVM
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<div>
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+        <div>
+            @*Nombre*@
+            @Html.LabelFor(g=>g.Name)
+            @Html.EditorFor(g=> g.Name)
+            @Html.ValidationMessageFor(g=>g.Name)
+        </div>
+        <div>
+            @*Password*@
+            @Html.LabelFor(g=>g.Password)
+            @Html.PasswordFor(g=>g.Password)
+            @Html.ValidationMessageFor(g=>g.Password)
+        </div>
+        <input type="submit" value="Log In" class="btn btn-success" />
+    }
+</div>
+

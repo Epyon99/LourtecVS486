@@ -1,0 +1,15 @@
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\bin\Debug\AndroidGUIClient.dll
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\bin\Debug\AndroidGUIClient.pdb
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\bin\Debug\AndroidGUIClient.AndroidGUIClient.apk
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\bin\Debug\AndroidGUIClient.AndroidGUIClient-Signed.apk
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\bin\Debug\BusinessLogic.dll
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\bin\Debug\BusinessLogic.pdb
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\AndroidGUIClient.csprojResolveAssemblyReference.cache
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\AndroidGUIClient.csproj.CoreCompileInputs.cache
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\AndroidGUIClient.dll
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\AndroidGUIClient.pdb
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\android\bin\AndroidGUIClient.AndroidGUIClient.apk
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\res\layout\main.xml
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\res\values\strings.xml
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\R.cs.flag
+c:\users\mfrch\source\repos\BusinessLogic\AndroidGUIClient\obj\Debug\uploadflags.txt

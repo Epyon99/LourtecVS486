@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DeliveryOnline.Models.Tienda>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div>
+    <p>@ViewBag.HolaMundo</p>
+    <p>@TempData["HolaMundo"]</p>
+    <p>@Session["HolaMundo"]</p>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegsitro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreComercial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RazonSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.TiendaList as List<DeliveryOnline.Models.Tienda>) {
+    <tr>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Direccion)*@
+            @Html.Raw(item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegsitro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreComercial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RazonSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodigoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodigoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodigoId })
+        </td>
+    </tr>
+}
+
+</table>

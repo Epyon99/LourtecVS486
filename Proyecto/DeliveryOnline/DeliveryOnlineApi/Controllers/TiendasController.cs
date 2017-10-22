@@ -17,9 +17,10 @@ namespace DeliveryOnlineApi.Controllers
         private DeliveryContext db = new DeliveryContext();
 
         // GET: api/Tiendas
-        public IQueryable<Tienda> GetTiendas()
+        public IHttpActionResult GetTiendas()
         {
-            return db.Tiendas;
+            return NotFound();
+            //return db.Tiendas;
         }
 
         // GET: api/Tiendas/5

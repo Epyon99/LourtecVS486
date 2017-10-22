@@ -19,7 +19,7 @@ using Newtonsoft.Json;
 namespace DeliveryOnline.Controllers
 {
     public class TiendaController : BaseController
-    {        
+    {
         // GET: Tienda
         public async Task<ActionResult> Index()
         {
@@ -30,15 +30,27 @@ namespace DeliveryOnline.Controllers
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var result = await client.GetAsync("http://localhost:59253/api/Tiendas");
-            using (Stream content = await result.Content.ReadAsStreamAsync())
+            switch (result.StatusCode)
             {
-                using (var streamreader = new StreamReader(content))
-                {
-                    JsonSerializer serializer = new JsonSerializer();
-                    List<Tienda> tiendas = (List<Tienda>)serializer.Deserialize(streamreader,typeof(List<Tienda>));
-                    ViewBag.TiendaList = tiendas;
-                }
+                case HttpStatusCode.OK:
+                    using (Stream content = await result.Content.ReadAsStreamAsync())
+                    {
+                        using (var streamreader = new StreamReader(content))
+                        {
+                            JsonSerializer serializer = new JsonSerializer();
+                            List<Tienda> tiendas = (List<Tienda>)serializer.Deserialize(streamreader, typeof(List<Tienda>));
+                            ViewBag.TiendaList = tiendas;
+                        }
+                    }
+                    break;
+                case HttpStatusCode.NotFound:
+                    throw new HttpException(404,"Not found");
+                case HttpStatusCode.Forbidden:
+                    throw new HttpException(401,"fORBIDDEN");
+                default:
+                    throw new HttpException(500, "Server error");
             }
+
 
             return View();
         }

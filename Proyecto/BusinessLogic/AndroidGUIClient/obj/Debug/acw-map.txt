@@ -1,0 +1,4 @@
+AndroidGUIClient.MainActivity, AndroidGUIClient;md5b37e93337ced93f84d0626078779fef9.MainActivity
+AndroidGUIClient.MainActivity, AndroidGUIClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5b37e93337ced93f84d0626078779fef9.MainActivity
+AndroidGUIClient.MainActivity;md5b37e93337ced93f84d0626078779fef9.MainActivity
+androidguiclient.MainActivity;md5b37e93337ced93f84d0626078779fef9.MainActivity
